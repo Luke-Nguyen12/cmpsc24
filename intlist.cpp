@@ -104,7 +104,7 @@ void IntList::push_front(int value) {
 }
 
 // append value at end of list
-void IntList::push_back(int value) {\
+void IntList::push_back(int value) {
 
     Node* newNode = new Node;
     newNode->info = value;
@@ -113,9 +113,10 @@ void IntList::push_back(int value) {\
         head = newNode;
         tail = newNode;
     }
-
+    else {
     tail->next = newNode;
     tail = newNode;
+    }   
 }
 
 // return count of values
